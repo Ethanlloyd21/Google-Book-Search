@@ -18,11 +18,13 @@
 
 
 # Install
+- clone the repo using
 ``` bash
-    npm i axios
+    git clone "the repo address here"
 ```
+- then on the folder terminal run install
 ``` bash
-    npx create-react-app employee-directory-react
+    npm install
 ```
 
 # Dependencies
