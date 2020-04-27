@@ -4,6 +4,7 @@
 - [General Info](#Info)
 - [Install](#Install)
 - [Dependencies](#Dependencies)
+- [Run](#Run)
 - [Technologies](#Technologies)
 - [Demo](#Demo)
 - [Author](#Author)
@@ -52,6 +53,21 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.9.10"
   },
+```
+
+# Run / Build
+
+``` bash
+    "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+
 ```
 
 In the project directory, you can run:
