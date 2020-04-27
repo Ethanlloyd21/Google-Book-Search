@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Footer from '../src/componets/Footer';
 import Nav from './componets/Nav';
 import Home from './pages/Home';
-import Saved from './pages/Saved';
+import Collection from './pages/Collection';
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Home} />
-          <Route exact path="/saved" component={Saved} />
+          <Route exact path="/saved" component={Collection} />
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }

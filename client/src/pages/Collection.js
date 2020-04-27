@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import API from '../utils/API';
 import Hero from '../componets/Hero';
+import Footer from '../componets/Footer';
 import { Col, Container, Row } from '../componets/Grid';
 import { List } from '../componets/List';
 import Book from '../componets/Book';
 import Card from '../componets/Card';
 
-function Saved() {
+function Collection() {
     const [books, setBooks] = useState([]);
+
 
     // Load all books and store them with setBooks
     useEffect(() => {
@@ -40,10 +42,10 @@ function Saved() {
                                     <Book
                                         key={book._id}
                                         title={book.title}
-                                        authors={book.authors}
+                                        authors={books.author}
                                         description={book.description}
                                         image={book.image}
-                                        link={book.infoLink}
+                                        link={book.link}
                                         onSubmit={() => deleteBook(book._id)}
                                         submitLabel="Delete"
                                         submitBtnClassName="btn btn-danger"
@@ -62,8 +64,10 @@ function Saved() {
                     </Card>
                 </Col>
             </Row>
+
         </Container >
+
     );
 }
 
-export default Saved;
+export default Collection;

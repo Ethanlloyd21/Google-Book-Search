@@ -3,28 +3,29 @@ import React from 'react';
 
 export function Input(props) {
     return (
-        <div className="form-group" style={{ marginTop: 30, marginRight: 30, marginBottom: 10 }}>
+        <div className="form-group" style={{ marginTop: 30, marginRight: 0, marginBottom: 50, marginLeft: 40 }}>
             <input className="form-control" {...props} />
         </div>
     );
 }
 
-export function FormBtn(props) {
+export function Button(props) {
     return (
         <button
             {...props}
             style={{
-                float: `center`,
-                marginLeft: 30,
+
+                marginLeft: 10,
                 marginRight: 30,
-                marginBottom: 10,
+                marginBottom: 50,
+                marginTop: 30
             }}
-            className="btn btn-primary"
+            className="btn btn-info"
         >
             {props.children}
         </button>
     );
 }
-FormBtn.propTypes = {
+Button.propTypes = {
     children: PropTypes.node,
 };

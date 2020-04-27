@@ -1,12 +1,8 @@
 #mainDiv {}
 
-#root button.btn.btn-primary element.style {
-    align-items: center;
-}
+#root button.btn.btn-primary element.style {}
 
-.search {
-    align-items: left;
-}
+.search {}
 
 .btn-primary {
     background-color: #17a2b8;

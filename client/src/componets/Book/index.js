@@ -4,14 +4,16 @@ import { Row, Col } from '../Grid';
 import './style.css';
 
 function Book(props) {
+    console.log(props);
     return (
         <ListItem>
             <Row>
-                <Col size="md-6" key={props.id}>
-                    <h3 className="font-bold">{props.title}</h3>
+                <Col size="md-2" key={props.id}>
+                    <p className="font-bold">Written by {props.authors ? props.authors.join(`, `) : "Unknown author"}</p>
                 </Col>
-                <Col size="md-6">
-                    <h5 className="font-bold">Written by {props.authors ? props.authors.join(`, `) : "Unknown author"}</h5>
+                <Col size="md-10">
+                    <h4 className="font-bold">{props.title}</h4>
+
                 </Col>
             </Row>
 
@@ -22,6 +24,7 @@ function Book(props) {
                         src={props.image}
                         alt={props.title}
                     />
+
 
 
                 </Col>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import API from '../utils/API';
 import Hero from '../componets/Hero';
-import { FormBtn, Input } from '../componets/Form'
+import { Button, Input } from '../componets/Form'
 import { Col, Container, Row } from '../componets/Grid';
 import { List } from '../componets/List';
 import Book from '../componets/Book';
@@ -52,29 +52,29 @@ function Home() {
         <Container fluid>
             <Hero />
 
-            <Row>
-                <Col size="md-4"></Col>
-                <Col size="md-4">
-                    <Card title="Book Search" icon="fas fa-book-reader">
-                        <form id="mainDiv">
-
-                            <Input
-
-                                onChange={handleInputChange}
-                                name="title"
-                                placeholder="Search for Book Title"
-
-                            />
-                            <FormBtn onClick={handleFormSubmit}>Search</FormBtn>
-                        </form>
-                    </Card>
-                </Col>
-                <Col size="md-4"></Col>
-            </Row>
 
             <Row>
                 <Col size="md-12">
-                    <Card title="Selections" icon="fas fa-shopping-basket">
+
+                    <Card title="Google Book Search" icon="fas fa-book-reader">
+                        <Row>
+                            <Col size="md-8">
+                                <form id="mainDiv">
+
+                                    <Input
+
+                                        onChange={handleInputChange}
+                                        name="title"
+                                        placeholder="Search for Book Title"
+
+                                    />
+
+                                </form>
+                            </Col>
+                            <Col size="md-4">
+                                <Button onClick={handleFormSubmit}>Search</Button>
+                            </Col>
+                        </Row>
                         {books.length ? (
                             <List>
                                 {books.map((book) => (
@@ -92,7 +92,7 @@ function Home() {
                                 ))}
                             </List>
                         ) : (
-                                <h3>No Results to Display</h3>
+                                <h3>Please use the Search area.</h3>
                             )}
                     </Card>
                 </Col>
