@@ -12,10 +12,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ethanlloyd21/Google-Book-Search.git"
-  },
   "author": "Lloyd Marcelino",
   "license": "ISC",
   "bugs": {
@@ -30,6 +26,5 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.10"
-  },
-  "homepage": "https://github.com/Ethanlloyd21/Google-Book-Search#readme"
+  }
 }
