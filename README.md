@@ -11,11 +11,8 @@
 - [License](#License)
 
 # General Info
-#### User Story
-- As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-#### Business Context
-- An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+-  React-based Google Books Search application requires a creation of a React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. This can achieve use Node, Express and MongoDB so that users can save books to review or purchase later.
 
 
 # Install
