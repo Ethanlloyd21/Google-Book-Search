@@ -20,6 +20,7 @@ function Collection() {
         API.getSavedBooks()
             .then((res) => setBooks(res.data))
             .catch((err) => console.error(err));
+
     }
 
     // Deletes a book from the database with a given id, then reloads books from the db

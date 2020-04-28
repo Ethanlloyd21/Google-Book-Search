@@ -4,16 +4,16 @@ import { Row, Col } from '../Grid';
 import './style.css';
 
 function Book(props) {
-    console.log(props);
-    console.log(props.image);
+
     return (
         <ListItem>
             <Row>
-                <Col size="md-2" key={props.id}>
-                    <p className="font-bold">Written by {props.authors ? props.authors.join(`, `) : "Unknown author"}</p>
+                <Col size="md-2">
+
                 </Col>
-                <Col size="md-10">
+                <Col size="md-10" key={props.id}>
                     <h4 className="font-bold">{props.title}</h4>
+
 
                 </Col>
             </Row>
@@ -30,10 +30,11 @@ function Book(props) {
 
                 </Col>
                 <Col size="12 sm-8 md-8">
+                    <p className="author">Written by {props.authors ? props.authors.join(`, `) : "Unknown author"}</p>
                     <p>{props.description}</p>
                     <div className="btn-container">
                         <a id="space"
-                            className="btn btn-success ml-2"
+                            className="btn btn-secondary ml-2"
                             target="_blank"
                             rel="noopener noreferrer"
                             href={props.link}
