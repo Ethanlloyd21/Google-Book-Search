@@ -24,7 +24,9 @@ function Home() {
         event.preventDefault();
 
         API.getBooks(query)
+
             .then((res) => {
+                console.log(query);
                 setBooks(res.data.items);
             })
             .catch((err) => console.error(err));
@@ -75,25 +77,29 @@ function Home() {
                                 <Button onClick={handleFormSubmit}>Search</Button>
                             </Col>
                         </Row>
-                        {books.length ? (
-                            <List>
-                                {books.map((book) => (
-                                    <Book
-                                        key={book.id}
-                                        title={book.volumeInfo.title}
-                                        authors={book.volumeInfo.authors}
-                                        description={book.volumeInfo.description}
-                                        image={book.volumeInfo.imageLinks.thumbnail}
-                                        link={book.volumeInfo.infoLink}
-                                        onSubmit={() => saveBook(book.id)}
-                                        submitLabel="Save"
-                                        submitBtnClassName="btn btn-info"
-                                    ></Book>
-                                ))}
-                            </List>
-                        ) : (
-                                <h3>Please use the Search area.</h3>
-                            )}
+                        <Row>
+                            {books.length ? (
+
+
+                                <List>
+                                    {books.map((book) => (
+                                        <Book
+                                            key={book.id}
+                                            title={book.volumeInfo.title}
+                                            authors={book.volumeInfo.authors}
+                                            description={book.volumeInfo.description}
+                                            image={book.volumeInfo.imageLinks.thumbnail}
+                                            link={book.volumeInfo.infoLink}
+                                            onSubmit={() => saveBook(book.id)}
+                                            submitLabel="Save"
+                                            submitBtnClassName="btn btn-info"
+                                        ></Book>
+                                    ))}
+                                </List>
+                            ) : (
+                                    <h3 id="infox">Please use the Search area.</h3>
+                                )}
+                        </Row>
                     </Card>
                 </Col>
             </Row>

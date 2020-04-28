@@ -5,6 +5,7 @@ import './style.css';
 
 function Book(props) {
     console.log(props);
+    console.log(props.image);
     return (
         <ListItem>
             <Row>

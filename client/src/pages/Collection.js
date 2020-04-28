@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import API from '../utils/API';
 import Hero from '../componets/Hero';
-import Footer from '../componets/Footer';
 import { Col, Container, Row } from '../componets/Grid';
 import { List } from '../componets/List';
 import Book from '../componets/Book';
@@ -42,7 +41,7 @@ function Collection() {
                                     <Book
                                         key={book._id}
                                         title={book.title}
-                                        authors={books.author}
+                                        authors={books.authors}
                                         description={book.description}
                                         image={book.image}
                                         link={book.link}

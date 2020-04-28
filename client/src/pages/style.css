@@ -18,3 +18,7 @@
 .container-fluid {
     width: 80%;
 }
+
+#infox {
+    align-items: center;
+}
