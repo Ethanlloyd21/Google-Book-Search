@@ -116,6 +116,7 @@ You don’t have to ever use eject. The curated feature set is suitable for smal
 - Express
 - MongoDB 
 - React
+- Google API (book search)
 
 
 
